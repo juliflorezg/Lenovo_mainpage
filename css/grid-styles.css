@@ -1,0 +1,194 @@
+body{
+    background-color: darkslategray;
+
+
+}
+
+.main{
+    background-image: url(../assets/vr.webp);
+    background-size: cover;
+    display:grid;
+    grid-gap: 0;
+    grid-template-columns: auto auto 25vw 25vw;
+    grid-auto-rows: minmax(45vh, auto);
+    grid-template-areas:     
+    "left left one two"
+    "left left three four"   
+    ;
+
+}
+
+.main__left-card{
+    
+    grid-area: left;
+    /* opacity: 0.5; */
+}
+
+.main__right-1{
+    grid-area: one;
+}
+
+.main__right-2{
+    grid-area: two;
+}
+
+.main__right-3{
+    grid-area: three;
+}
+
+.main__right-4{
+    grid-area: four;
+}
+
+
+
+
+.main__right-1{
+    position: relative;
+    border: solid ;
+    border-color:darkgrey ;
+    border-width: 0 1px 1px 1px;   
+    color:lightgray;
+    
+}
+
+.main__right-1:before{  /*add a pseudoelement for the card, so it will contain the background image with 0 opacity*/
+
+    content:""; /*set content property so it shows up on the page.*/
+    background-image: url(../assets/1.webp);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;   
+    opacity: 0;
+    transition: 0.5s; /*This line adds the nice transition for when the pointer gets out of the card area (dehover)*/
+}
+
+
+.main__right-1:hover:before{ /*this change the pseudo element state based con hovering the parent 'main__right-1'*/
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main__label1{
+    position: relative;
+    top:70%;
+    text-align: center;
+}
+
+.main__label1:after{
+    content:'+';
+    position:absolute;
+}
+
+   
+    
+
+.main__right-2{
+    position: relative;
+    border: solid;   
+    border-color: darkgrey;
+    border-width: 0  0 1px 0;
+    color:lightgray;
+}
+
+.main__right-2:before{  /*add a pseudoelement for the card, so it will contain the background image with 0 opacity*/
+
+    content:""; /*set content property so it shows up on the page.*/
+    background-image: url(../assets/2.webp);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;    
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.main__right-2:hover:before{ /*this change the pseudo element state based con hovering the parent 'main__right-1'*/
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main__label2{
+    position: relative;
+    top:70%;
+    text-align: center;
+}
+
+
+
+.main__right-3{
+    position: relative;
+    border: solid;   
+    border-color: darkgrey;
+    border-width: 0 1px  ;
+    color:lightgray;
+}
+
+.main__right-3:before{  /*add a pseudoelement for the card, so it will contain the background image with 0 opacity*/
+
+    content:""; /*set content property so it shows up on the page.*/
+    background-image: url(../assets/3.webp);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.main__right-3:hover:before{ /*this change the pseudo element state based con hovering the parent 'main__right-1'*/
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main__label3{
+    position: relative;
+    top:10%;
+    text-align: center;
+}
+
+
+
+.main__right-4{
+    position: relative;
+    border: none;
+    color:lightgray;
+}
+
+.main__right-4:before{  /*add a pseudoelement for the card, so it will contain the background image with 0 opacity*/
+
+    content:""; /*set content property so it shows up on the page.*/
+    background-image: url(../assets/4.webp);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.main__right-4:hover:before{ /*this change the pseudo element state based con hovering the parent 'main__right-1'*/
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.main__label4{
+    
+    position: relative;
+    top:10%;
+    text-align: center;
+}
+
+
+
+
+
